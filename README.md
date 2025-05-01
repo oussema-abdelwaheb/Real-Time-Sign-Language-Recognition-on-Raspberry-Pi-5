@@ -1,15 +1,3 @@
-import os
-
-# Define the project name and directory structure
-project_name = "sign-language-pi"
-repo_dir = project_name
-src_dir = os.path.join(repo_dir, 'src')
-model_dir = os.path.join(repo_dir, 'model')
-
-# Define the content for each file
-
-# README.md
-readme_content = """
 # 🖐️ Real-Time Sign Language Recognition on Raspberry Pi 5
 
 A lightweight, fully offline **sign language recognition system** built using a **Raspberry Pi 5**, **USB webcam**, and a **2x16 I2C LCD**. This project uses a classical machine learning model trained on over **87,000 images** to detect and display 28 static American Sign Language (ASL) signs in real time.
@@ -48,17 +36,33 @@ Unlike most gesture recognition systems that rely on GPU-intensive deep learning
 ---
 
 ## 🖼️ Demo
-
+found on my linkedin profile
 ![Insert a GIF or image here of the system detecting a gesture and displaying it on the LCD]
 
 ---
 
-## 📦 Installation
+⚡ Optimization Details
 
-> ⚠️ This project assumes you already have Python and OpenCV installed on your Raspberry Pi.
+To ensure real-time performance on the Pi 5:
+The system skips 3–4 frames between each prediction.
+Only hand region is processed to reduce noise and input size.
+Uses classical ML (e.g., SVM or RandomForest) instead of deep learning for lightweight inference.
 
-1. **Clone the repo:**
+🚧 Limitations & Future Work
 
-```bash
-git clone https://github.com/your-username/sign-language-pi.git
-cd sign-language-pi
+Currently supports 28 static signs (no dynamic gestures or full sentences).
+No AI accelerator used (yet) — planned upgrade for word and phrase recognition.
+LCD displays one character at a time; future versions may support larger or scrolling displays.
+
+---
+
+huge thanks to :
+@misc{akash_nagaraj_2018,
+	title={ASL Alphabet},
+	url={https://www.kaggle.com/dsv/29550},
+	DOI={10.34740/KAGGLE/DSV/29550},
+	publisher={Kaggle},
+	author={Akash Nagaraj},
+	year={2018}
+}
+
