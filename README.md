@@ -30,7 +30,7 @@ Unlike most gesture recognition systems that rely on GPU-intensive deep learning
 | **Hardware**         | Raspberry Pi 5, USB webcam, 2x16 I2C LCD            |
 | **Language**         | Python 3                                            |
 | **Libraries**        | `OpenCV`, `Scikit-learn`, `smbus2`, `pickle`, `numpy` |
-| **Model**            | Classical ML (e.g., SVM or Random Forest), serialized via `pickle` |
+| **Model**            | Classical ML (Random Forest), serialized via `pickle` |
 | **Dataset**          | [Kaggle ASL Alphabet Dataset](https://www.kaggle.com/datasets/grassknoted/asl-alphabet) |
 
 ---
