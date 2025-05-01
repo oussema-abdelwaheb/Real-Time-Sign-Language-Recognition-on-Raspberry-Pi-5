@@ -37,7 +37,7 @@ Unlike most gesture recognition systems that rely on GPU-intensive deep learning
 
 ## 🖼️ Demo
 found on my linkedin profile
-![Insert a GIF or image here of the system detecting a gesture and displaying it on the LCD]
+https://www.linkedin.com/feed/update/urn:li:activity:7323834655709769729/
 
 ---
 
